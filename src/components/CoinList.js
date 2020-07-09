@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import coinGecko from "../apis/coinGecko";
+
 import Coin from "./Coin";
+import AddCoin from "./AddCoin";
+import { WatchListContext } from "../context/WatchListContext";
 
 const CoinList = () => {
-  return (
-    <div className="container mx-auto bg-gray-100 p-16 rounded-lg min-h-screen">
-      <Coin />
-      <Coin />
-      <Coin />
-      <Coin />
+  const [coins, setCoins] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const { watchList } = useContext(WatchListContext);
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      const results = await coinGecko.get("/coins/markets", {
+        params: {
+          vs_currency: "usd",
+          ids: watchList.join(","),
+        },
+      });
+      setCoins(results.data);
+      setIsLoading(false);
+    };
+    fetchData();
+  }, [watchList]);
+
+  return isLoading ? (
+    <h2 className="text-center text-3xl text-white mb-8">Loading....</h2>
+  ) : (
+    <div className="container mx-auto bg-gray-100 sm:p-4 md:p-16 rounded-lg min-h-screen relative">
+      <AddCoin />
+      <div>
+        <Coin />
+        <Coin />
+        <Coin />
+        <Coin />
+      </div>
     </div>
   );
 };
