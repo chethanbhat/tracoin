@@ -7,7 +7,7 @@ import { WatchListContextProvider } from "./context/WatchListContext";
 
 function App() {
   return (
-    <div className="shadow-xl p-4 bg-gray-800 h-screen min-h-screen">
+    <div className="shadow-xl p-4 bg-gray-800 min-h-screen">
       <WatchListContextProvider>
         <BrowserRouter>
           <Header />

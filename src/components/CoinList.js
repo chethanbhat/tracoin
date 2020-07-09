@@ -8,7 +8,7 @@ import { WatchListContext } from "../context/WatchListContext";
 const CoinList = () => {
   const [coins, setCoins] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { watchList } = useContext(WatchListContext);
+  const { watchList, deleteCoin } = useContext(WatchListContext);
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -21,20 +21,29 @@ const CoinList = () => {
       setCoins(results.data);
       setIsLoading(false);
     };
-    fetchData();
+    if (watchList.length > 0) {
+      fetchData();
+    } else {
+      setCoins([]);
+    }
   }, [watchList]);
+
+  console.log(coins);
+
+  const renderCoins = () => (
+    <div>
+      {coins.map((coin) => (
+        <Coin key={coin.symbol} coin={coin} deleteCoin={deleteCoin} />
+      ))}
+    </div>
+  );
 
   return isLoading ? (
     <h2 className="text-center text-3xl text-white mb-8">Loading....</h2>
   ) : (
     <div className="container mx-auto bg-gray-100 sm:p-4 md:p-16 rounded-lg min-h-screen relative">
       <AddCoin />
-      <div>
-        <Coin />
-        <Coin />
-        <Coin />
-        <Coin />
-      </div>
+      {renderCoins()}
     </div>
   );
 };
