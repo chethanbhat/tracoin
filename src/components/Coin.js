@@ -7,20 +7,21 @@ import ValueRise from "./ValueRise";
 const Coin = ({ coin, deleteCoin }) => {
   console.log(coin);
   return (
-    <Link to="/coindetail" className="z-10">
-      <div className="container mx-auto px-2 md:px-4 mb-8 md:mb-4 z-10">
-        <div className="flex items-center justify-around p-2 md:p-6 md:p-4 shadow-md rounded-lg relative">
-          <div className="col-span-4 self-center">
+    <Link to={`/coindetail/${coin.id}`}>
+      <div className="container mx-auto px-2 md:px-4 mb-8 md:mb-4">
+        <div className="flex items-center justify-around p-2 md:p-4 shadow-md rounded-lg relative">
+          <div className="w-1/3 text-center">
             <img
-              className="w-12 h-12 rounded"
+              className="block w-12 h-12 mx-auto"
               src={coin.image}
               alt={coin.name}
             />
+            <h3>{coin.name}</h3>
           </div>
-          <div className="col-span-3 text-gray-800 font-bold">
+          <div className="w-1/3 text-gray-800 font-bold text-center">
             ${coin.current_price}
           </div>
-          <div className="col-span-3">
+          <div className="w-1/3 text-center">
             {Number(coin.price_change_percentage_24h) > 0 ? (
               <span className="text-green-800 font-bold">
                 <ValueRise />
@@ -34,7 +35,7 @@ const Coin = ({ coin, deleteCoin }) => {
             )}
           </div>
           <div
-            className="absolute top-0 right-0 col-span-2 z-20"
+            className="absolute top-0 right-0 col-span-2"
             onClick={(e) => {
               e.preventDefault();
               deleteCoin(coin.id);

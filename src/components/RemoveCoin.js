@@ -3,7 +3,7 @@ import React from "react";
 const RemoveCoin = () => {
   return (
     <svg
-      className="fill-current text-red-600 inline-block h-5 w-5 cursor-pointer"
+      className="fill-current text-gray-500 hover:text-red-600 inline-block h-5 w-5 cursor-pointer"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
     >

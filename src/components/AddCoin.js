@@ -17,7 +17,7 @@ const AddCoin = () => {
             tabIndex="-1"
             className="fixed w-full h-full inset-0 bg-black opacity-50 cursor-default"
           ></button>
-          <div className="absolute w-48 py-2 mt-2 bg-white rounded-lg shadow-xl">
+          <div className="absolute w-64 py-2 mt-2 bg-white rounded-lg shadow-xl z-10">
             <a
               className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
               href="http://"
