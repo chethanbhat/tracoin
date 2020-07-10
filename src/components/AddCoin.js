@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddCoin = () => {
+const AddCoin = ({ addCoin }) => {
   const [toggleOpen, setToggleOpen] = useState(false);
   return (
     <div className="relative p-4">
@@ -17,38 +17,50 @@ const AddCoin = () => {
             tabIndex="-1"
             className="fixed w-full h-full inset-0 bg-black opacity-50 cursor-default"
           ></button>
-          <div className="absolute w-64 py-2 mt-2 bg-white rounded-lg shadow-xl z-10">
-            <a
-              className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
-              href="http://"
+          <ul className="absolute w-64 py-2 mt-2 bg-gray-800 rounded-lg shadow-xl z-10">
+            <li
+              className="block px-4 py-2 text-gray-100 hover:bg-yellow-600 hover:text-white"
+              onClick={() => addCoin("bitcoin")}
             >
-              Item 1
-            </a>
-            <a
-              className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
-              href="http://"
+              Bitcoin
+            </li>
+            <li
+              className="block px-4 py-2 text-gray-100 hover:bg-yellow-600 hover:text-white cursor-pointer"
+              onClick={() => addCoin("ethereum")}
             >
-              Item 2
-            </a>
-            <a
-              className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
-              href="http://"
+              Ethereum
+            </li>
+            <li
+              className="block px-4 py-2 text-gray-100 hover:bg-yellow-600 hover:text-white cursor-pointer"
+              onClick={() => addCoin("ripple")}
             >
-              Item 3
-            </a>
-            <a
-              className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
-              href="http://"
+              Ripple
+            </li>
+            <li
+              className="block px-4 py-2 text-gray-100 hover:bg-yellow-600 hover:text-white cursor-pointer"
+              onClick={() => addCoin("litecoin")}
             >
-              Item 4
-            </a>
-            <a
-              className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
-              href="http://"
+              Litecoin
+            </li>
+            <li
+              className="block px-4 py-2 text-gray-100 hover:bg-yellow-600 hover:text-white cursor-pointer"
+              onClick={() => addCoin("bitcoin-cash")}
             >
-              Item 5
-            </a>
-          </div>
+              Bitcoin Cash
+            </li>
+            <li
+              className="block px-4 py-2 text-gray-100 hover:bg-yellow-600 hover:text-white cursor-pointer"
+              onClick={() => addCoin("monero")}
+            >
+              Monero
+            </li>
+            <li
+              className="block px-4 py-2 text-gray-100 hover:bg-yellow-600 hover:text-white cursor-pointer"
+              onClick={() => addCoin("tether")}
+            >
+              Tether
+            </li>
+          </ul>
         </>
       ) : null}
     </div>

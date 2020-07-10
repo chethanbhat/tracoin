@@ -8,7 +8,7 @@ import { WatchListContext } from "../context/WatchListContext";
 const CoinList = () => {
   const [coins, setCoins] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { watchList, deleteCoin } = useContext(WatchListContext);
+  const { watchList, deleteCoin, addCoin } = useContext(WatchListContext);
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -42,7 +42,7 @@ const CoinList = () => {
     <h2 className="text-center text-3xl text-white mb-8">Loading....</h2>
   ) : (
     <div className="container mx-auto bg-gray-100 sm:p-4 md:p-16 rounded-lg min-h-half relative">
-      <AddCoin />
+      <AddCoin addCoin={addCoin} />
       {renderCoins()}
     </div>
   );
