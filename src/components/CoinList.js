@@ -41,7 +41,7 @@ const CoinList = () => {
   return isLoading ? (
     <h2 className="text-center text-3xl text-white mb-8">Loading....</h2>
   ) : (
-    <div className="container mx-auto bg-gray-100 sm:p-4 md:p-16 rounded-lg min-h-screen relative">
+    <div className="container mx-auto bg-gray-100 sm:p-4 md:p-16 rounded-lg min-h-half relative">
       <AddCoin />
       {renderCoins()}
     </div>

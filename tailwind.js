@@ -288,6 +288,7 @@ module.exports = {
       ...theme("spacing"),
       full: "100%",
       screen: "100vh",
+      half: "50vh",
     }),
     inset: {
       "0": "0",
@@ -350,7 +351,8 @@ module.exports = {
     minHeight: {
       "0": "0",
       full: "100%",
-      screen: "75vh",
+      screen: "100vh",
+      half: "50vh",
     },
     minWidth: {
       "0": "0",

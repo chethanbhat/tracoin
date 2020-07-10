@@ -7581,7 +7581,7 @@ video {
 }
 
 .min-h-screen {
-  min-height: 75vh;
+  min-height: 100vh;
 }
 
 .min-w-0 {
@@ -21352,7 +21352,7 @@ video {
   }
 
   .sm\:min-h-screen {
-    min-height: 75vh;
+    min-height: 100vh;
   }
 
   .sm\:min-w-0 {
@@ -35124,7 +35124,7 @@ video {
   }
 
   .md\:min-h-screen {
-    min-height: 75vh;
+    min-height: 100vh;
   }
 
   .md\:min-w-0 {
@@ -48896,7 +48896,7 @@ video {
   }
 
   .lg\:min-h-screen {
-    min-height: 75vh;
+    min-height: 100vh;
   }
 
   .lg\:min-w-0 {
@@ -62668,7 +62668,7 @@ video {
   }
 
   .xl\:min-h-screen {
-    min-height: 75vh;
+    min-height: 100vh;
   }
 
   .xl\:min-w-0 {

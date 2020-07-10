@@ -7,7 +7,7 @@ import ValueRise from "./ValueRise";
 const Coin = ({ coin, deleteCoin }) => {
   console.log(coin);
   return (
-    <Link to={`/coindetail/${coin.id}`}>
+    <Link to={`/coins/${coin.id}`}>
       <div className="container mx-auto px-2 md:px-4 mb-8 md:mb-4">
         <div className="flex items-center justify-around p-2 md:p-4 shadow-md rounded-lg relative">
           <div className="w-1/3 text-center">
