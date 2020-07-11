@@ -54,12 +54,12 @@ const Chart = ({ data }) => {
           </h3>
           <h5 className="text-lg">
             {Number(coin.price_change_percentage_24h) > 0 ? (
-              <span className="text-green-800 font-bold">
+              <span className="text-green-600 font-bold">
                 {Math.abs(coin.price_change_percentage_24h).toFixed(2)}%
                 <ValueRise />
               </span>
             ) : (
-              <span className="text-red-800 font-bold">
+              <span className="text-red-600 font-bold">
                 {Math.abs(coin.price_change_percentage_24h).toFixed(2)}%
                 <ValueFall />
               </span>
@@ -70,6 +70,9 @@ const Chart = ({ data }) => {
     }
   };
 
+  if (!data) {
+    return null;
+  }
   return (
     <div className="bg-white w-full h-full p-4 shadow-xl">
       <div>{renderPrice()}</div>

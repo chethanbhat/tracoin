@@ -3,7 +3,7 @@ import React from "react";
 const ValueFall = () => {
   return (
     <svg
-      className="fill-current text-red-900 inline-block h-6 w-6 cursor-pointer"
+      className="fill-current text-red-600 inline-block h-6 w-6 cursor-pointer"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
     >

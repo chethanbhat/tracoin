@@ -23,12 +23,12 @@ const Coin = ({ coin, deleteCoin }) => {
           </div>
           <div className="w-1/3 text-center">
             {Number(coin.price_change_percentage_24h) > 0 ? (
-              <span className="text-green-800 font-bold">
+              <span className="text-green-600 font-bold">
                 <ValueRise />
                 {Math.abs(coin.price_change_percentage_24h).toFixed(2)}%
               </span>
             ) : (
-              <span className="text-red-800 font-bold">
+              <span className="text-red-600 font-bold">
                 <ValueFall />
                 {Math.abs(coin.price_change_percentage_24h).toFixed(2)}%
               </span>

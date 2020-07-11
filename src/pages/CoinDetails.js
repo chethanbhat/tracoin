@@ -8,7 +8,7 @@ const CoinDetails = () => {
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [coinData, setCoinData] = useState({});
-
+  // Format Data as per ChartJS
   const formatData = (data) => {
     return data.map((el) => {
       return {
