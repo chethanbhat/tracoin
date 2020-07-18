@@ -44,6 +44,12 @@ const AddCoin = ({ addCoin }) => {
             </li>
             <li
               className="block px-4 py-2 text-gray-100 hover:bg-yellow-600 hover:text-white cursor-pointer"
+              onClick={() => addCoin("dogecoin")}
+            >
+              Dogecoin
+            </li>
+            <li
+              className="block px-4 py-2 text-gray-100 hover:bg-yellow-600 hover:text-white cursor-pointer"
               onClick={() => addCoin("bitcoin-cash")}
             >
               Bitcoin Cash

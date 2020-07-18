@@ -17,6 +17,7 @@ Supported Crypto Currencies -
 - Ethereum
 - Ripple
 - Litecoin
+- Dogecoin
 - Bitcoin Cash
 - Monero
 - Tether
